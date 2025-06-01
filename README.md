@@ -30,17 +30,17 @@ By placing identical ArUco markers in two different, non-overlapping environment
 
 ## 📷 False Positive Example
 
-Below are two different input frames where the loop closure was **falsely** detected:
+Below are two different input frames where the loop closure was not detected:
 
 ### 🔹 Image A (Original Location)
 
-![Image A](images/false_loop_a.jpg)
+![Image A](images/00008.jpg)
 
 ### 🔹 Image B (Fake Location with ArUco Marker)
 
-![Image B](images/false_loop_b.jpg)
+![Image B](images/00018.jpg)
 
-Despite being same places, FAB-MAP incorrectly identified these as the different location.
+Despite being the same place, FAB-MAP incorrectly identified these as the different locations and did not close the loop. 
 
 ---
 
@@ -48,19 +48,8 @@ Despite being same places, FAB-MAP incorrectly identified these as the different
 
 Here is the portion of the FAB-MAP likelihood matrix showing the false loop closure:
 
-```matlab
-% Simplified view of the FAB-MAP output likelihoods (log probabilities)
-% Rows and columns represent image indices in the sequence
+![Image C](untitled.jpg)
 
-% Example: High value represented by yellow color at (4, 14) suggests loop closure between image 4 and 14
-loopClosureMatrix = [
-    ... 
-    0.0012  0.0008  0.0007  ...
-    0.0004  0.9501  0.0006  ...
-    0.0003  0.0005  0.9702  ...
-    ...
-];
-```
 📌 Note: The high likelihood between mismatched images was induced due to visually identical ArUco marker patterns.
 
 ## 🔁 How to Reproduce
@@ -73,7 +62,7 @@ Run the image sequence through FAB-MAP
 Analyze the *.mat output or visualize loop closures
 
 
-##⚠️ Observations & Implications
+## ⚠️ Observations & Implications
 FAB-MAP is vulnerable to visual spoofing via structured artificial landmarks
 
 ArUco markers (being highly distinctive) are wrongly treated as environmental features
