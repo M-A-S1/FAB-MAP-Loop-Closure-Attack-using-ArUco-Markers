@@ -1,0 +1,13 @@
+Mode: JOINT
+p(observe | exists) = 0.39
+p(at new place) = 0.9
+Likelihood Smoothing Factor: 0.99
+Bennett Bail-out Prob = 1e-006
+Prior: Previous Position + Motion Model
+Motion Model: Always Move
+Sampler: REAL SAMPLES
+Minimum Number Of Samples Used: 2859
+Data Association: OFF
+Images Processed: All
+
+Finished. Total time 1.02374 seconds.
