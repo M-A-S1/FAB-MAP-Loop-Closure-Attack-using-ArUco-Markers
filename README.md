@@ -48,7 +48,7 @@ Despite being the same place, FAB-MAP incorrectly identified these as the differ
 
 Here is the portion of the FAB-MAP likelihood matrix showing the false loop closure:
 
-![Image C](untitled.jpg)
+![Image C](untitled.png)
 
 📌 Note: The high likelihood between mismatched images was induced due to visually identical ArUco marker patterns.
 
