@@ -1,8 +1,8 @@
 # FAB-MAP-Loop-Closure-Attack-using-ArUco-Markers# 🔁 FAB-MAP Loop Closure Attack using ArUco Markers
 
-This project demonstrates a successful spoofing of the [original FAB-MAP](https://www.robots.ox.ac.uk/~mobile/FABMAP/) loop closure algorithm by injecting visually similar artificial landmarks (ArUco markers) to induce a **false loop closure** detection. 
+This project demonstrates a successful spoofing of the [original FAB-MAP](https://www.robots.ox.ac.uk/~mobile/FABMAP/) loop closure algorithm by injecting visually similar artificial landmarks (ArUco markers) to prevent loop closure. 
 
-By manipulating visual input, we tricked FAB-MAP into believing that two different locations were the same — a critical failure case in SLAM systems.
+By manipulating visual input, we tricked FAB-MAP into believing that the same locations were different — a critical failure case in SLAM systems.
 
 ## 📌 Objective
 
@@ -21,10 +21,10 @@ To evaluate the robustness of FAB-MAP against synthetic landmarks and explore it
 
 ## 🚨 Spoofing the Loop Closure
 
-By placing identical ArUco markers in two different, non-overlapping environments, we were able to:
+By swapping ArUco markers in different, non-overlapping environments, we were able to:
 
-- Trigger a **false loop closure**
-- Force FAB-MAP to incorrectly relocalize and merge topologically distinct locations
+- Prevent **loop closure**
+- Prevent FAB-MAP to relocalize and merge topologically distinct locations
 
 ---
 
@@ -36,7 +36,7 @@ Below are two different input frames where the loop closure was not detected:
 
 ![Image A](images/00008.jpg)
 
-### 🔹 Image B (Fake Location with ArUco Marker)
+### 🔹 Image B (Original Location with different ArUco Marker)
 
 ![Image B](images/00018.jpg)
 
@@ -50,7 +50,7 @@ Here is the portion of the FAB-MAP likelihood matrix showing the false loop clos
 
 ![Image C](untitled.png)
 
-📌 Note: The high likelihood between mismatched images was induced due to visually identical ArUco marker patterns.
+📌 Note: The low likelihood between  images was induced due to visually different ArUco marker patterns.
 
 ## 🔁 How to Reproduce
 Clone the original FAB-MAP and this repo
