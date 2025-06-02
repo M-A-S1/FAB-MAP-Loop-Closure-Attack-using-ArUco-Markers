@@ -1,4 +1,4 @@
-# FAB-MAP-Loop-Closure-Attack-using-ArUco-Markers# 🔁 FAB-MAP Loop Closure Attack using ArUco Markers
+# 🔁 Adversarial attack on FAB-MAP using ArUco Markers
 
 This project demonstrates a successful spoofing of the [original FAB-MAP](https://www.robots.ox.ac.uk/~mobile/FABMAP/) loop closure algorithm by injecting visually similar artificial landmarks (ArUco markers) to prevent loop closure. 
 
